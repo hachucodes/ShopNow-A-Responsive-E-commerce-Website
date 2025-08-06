@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us - ShopNow</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    .footer-sections {
+  max-width: 1200px; 
+  margin: auto; 
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  gap: 40px;
+  font-family: "Gruppo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #2d2d2d;
+}
+
+.hero-section {
+  background: url('images/contact-banner.jpg') center/cover no-repeat;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-text h1 {
+  color: black;
+  font-size: 48px;
+  margin: 0;
+  font-weight: bold;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+.hero-text p {
+  color: #2c3e50;;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.contact-container {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.contact-info, .contact-form {
+  flex: 1 1 45%;
+}
+
+.contact-info h2, .contact-form h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.contact-info p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contact-info li {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input, .contact-form textarea {
+  font-size: 16px;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 12px;
+  background-color: #FF3E00;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #e63600;
+}
+
+footer {
+  text-align: center;
+  background-color: #f8f8f8;
+  color: #777;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+}
+
+  </style>
+
+</head>
+<body>
+
+    <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <a class="navbar-brand"  id="logofont" href="#"><img src="images/logo.png" alt="logo" style=" height: 50px; width: 50px;"> ShopNow!</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbarNav" class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="product_list.html">Product</a></li>
+        <li class="nav-item"><a class="nav-link" href="category.html">Category</a></li>
+        <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i> <span class="badge badge-dark">0</span></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero-section">
+    <div class="hero-text">
+      <h1>Contact Us</h1>
+      <p>We're here to help — reach out anytime!</p>
+    </div>
+  </header>
+
+  <main class="contact-container">
+    <section class="contact-info">
+      <h2>Get in Touch</h2>
+      <p>Have a question, suggestion, or issue? Our team is ready to assist you. Just drop us a message using the form, or contact us directly through the information below.</p>
+
+      <ul>
+        <li><strong>📍 Address:</strong> 101 ShopNow Lane, Bengaluru, India</li>
+        <li><strong>📞 Phone:</strong> +91 xxxxxx xxxxx</li>
+        <li><strong>📧 Email:</strong> support@shopnow.com</li>
+        <li><strong>⏰ Hours:</strong> Mon - Fri, 9AM - 6PM</li>
+      </ul>
+    </section>
+
+    <section class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="number" name="phone number" placeholder="Phone number" required />
+        <input type="text" id="orderid" name="orderid" placeholder="Order ID" />
+        <textarea name="message" placeholder="Your Message" rows="3" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center py-4 bg-light text-white">
+    <div class="footer-sections" >
+
+      <!-- Logo and About -->
+      <div style="flex: 1; min-width: 220px;">
+        <h2 style="font-size: 24px; color: #333;" id="logofont"> <img src="images/logo.png" alt="logo"> ShopNow!</h2>
+        <p style="font-size: 14px; line-height: 1.6; color: #2c3e50; ">
+          Click it. Cart it. Shop it. <br> Enjoy a seamless shopping experience, fast delivery, and easy returns.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div style="flex: 1; min-width: 200px;">
+        <h3 style="font-size: 18px; margin-bottom: 15px; font-weight: bold; color: #333;">Quick Links</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="#" style="text-decoration: none; color: #2c3e50;">Home</a></li>
+          <li><a href="#latest-products" style="text-decoration: none; color: #2c3e50">Shop</a></li>
+          <li><a href="#" style="text-decoration: none; color: #2c3e50;">Cart</a></li>
+          <li><a href="#" style="text-decoration: none; color: #2c3e50;">My Orders</a></li>
+          <li><a href="#about-us" style="text-decoration: none; color: #2c3e50;">About Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div style="flex: 1; min-width: 200px;">
+        <h3 style="font-size: 18px; margin-bottom: 15px; font-weight: bold; color: #333;">Support</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="#contact-us" style="text-decoration: none; color: #2c3e50;">Contact Us</a></li>
+          <li><a href="#" style="text-decoration: none; color: #2c3e50;">FAQs</a></li>
+          <li><a href="#" style="text-decoration: none; color: #2c3e50;">Shipping & Returns</a></li>
+          <li><a href="#" style="text-decoration: none; color: #2c3e50;">Terms of Service</a></li>
+          <li><a href="#" style="text-decoration: none; color: #2c3e50;">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="color: #2c3e50; font-weight: bold;">&copy; 2025 ShopZone. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ShopNow - Product List</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
+  <link rel="stylesheet" href="product-list.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <a class="navbar-brand"  id="logofont" href="#"><img src="images/logo.png" alt="logo" style=" height: 50px; width: 50px;"> ShopNow!</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarNav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="product_list.html">Product</a></li>
+            <li class="nav-item"><a class="nav-link" href="category.html">Category</a></li>
+            <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i> <span class="badge badge-dark">0</span></a></li>
+        </ul>
+        </div>
+  </nav>
+
+  <section class="products py-5" id="products">
+  <!-- Search Section -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search for products..." />
+    <button onclick="handleSearch()">Search</button>
+  </div>
+
+  <!-- Product Detail -->
+  <div id="product-detail" class="product-detail"></div>
+
+  <!-- Search Results -->
+  <div id="search-results" class="search-results"></div>
+
+    <div class="container mt-4">
+      <div class="row">
+        <!-- Filter Column -->
+        <div class="col-md-3">
+        <h5>Filters</h5>
+        <hr>
+
+        <!-- Price Filter -->
+        <div class="mb-3">
+          <label for="priceRange" class="form-label">Max Price</label>
+          <input type="range" class="form-range" min="100" max="2000" id="priceRange">
+          <div><strong>₹ <span id="priceValue">2000</span></strong></div>
+        </div>
+
+        <!-- Category Filter -->
+        <div class="mb-3">
+          <label class="form-label" style="font-weight: bold;">Category</label>
+          <div class="list-group">
+            <button type="button" class="list-group-item list-group-item-action" onclick="filterByCategory('All')">All</button>
+            <button type="button" class="list-group-item list-group-item-action" onclick="filterByCategory('Shoes')">Shoes</button>
+            <button type="button" class="list-group-item list-group-item-action" onclick="filterByCategory('Clothing')">Clothing</button>
+            <button type="button" class="list-group-item list-group-item-action" onclick="filterByCategory('Accessories')">Accessories</button>
+          </div>
+        </div>
+
+        <!-- Apply Button -->
+        <button class="btn btn-outline-primary w-100 mt-3" onclick="applyFilter()">Apply Filter</button>
+      </div>
+
+      <!-- Product Cards Column -->
+      <div class="col-md-9">
+        <div class="product-container" id="product-list" >
+          <!-- Product cards rendered by JS -->
+        </div>
+      </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+  <footer class="text-center py-4 bg-light text-white">
+    <div class="footer-sections" >
+
+      <!-- Logo and About -->
+      <div style="flex: 1; min-width: 220px;">
+        <h2 style="font-size: 24px; color: #333;" id="logofont"> <img src="images/logo.png" alt="logo"> ShopNow!</h2>
+        <p style="font-size: 14px; line-height: 1.6; color: #2c3e50; ">
+          Click it. Cart it. Shop it. <br> Enjoy a seamless shopping experience, fast delivery, and easy returns.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div style="flex: 1; min-width: 200px;">
+        <h3 style="font-size: 18px; margin-bottom: 15px; font-weight: bold; color: #333;">Quick Links</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="#" style="text-decoration: none; color: #2c3e50;">Home</a></li>
+          <li><a href="#latest-products" style="text-decoration: none; color: #2c3e50">Shop</a></li>
+          <li><a href="#" style="text-decoration: none; color: #2c3e50;">Cart</a></li>
+          <li><a href="#" style="text-decoration: none; color: #2c3e50;">My Orders</a></li>
+          <li><a href="#about-us" style="text-decoration: none; color: #2c3e50;">About Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div style="flex: 1; min-width: 200px;">
+        <h3 style="font-size: 18px; margin-bottom: 15px; font-weight: bold; color: #333;">Support</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="#contact-us" style="text-decoration: none; color: #2c3e50;">Contact Us</a></li>
+          <li><a href="#" style="text-decoration: none; color: #2c3e50;">FAQs</a></li>
+          <li><a href="#" style="text-decoration: none; color: #2c3e50;">Shipping & Returns</a></li>
+          <li><a href="#" style="text-decoration: none; color: #2c3e50;">Terms of Service</a></li>
+          <li><a href="#" style="text-decoration: none; color: #2c3e50;">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="color: #2c3e50; font-weight: bold;">&copy; 2025 ShopZone. All rights reserved.</p>
+  </footer>
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+
+</body>
+</html>

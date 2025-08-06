@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Confirmation - ShopNow</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    .footer-sections {
+  max-width: 1200px; 
+  margin: auto; 
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  gap: 40px;
+  font-family: "Gruppo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.order_confirmation img {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+.order_confirmation h2 {
+  color: #28a745;
+  font-weight: bold;
+}
+  </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <a class="navbar-brand"  id="logofont" href="#"><img src="images/logo.png" alt="logo" style=" height: 50px; width: 50px;"> ShopNow!</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbarNav" class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="product_list.html">Product</a></li>
+        <li class="nav-item"><a class="nav-link" href="category.html">Category</a></li>
+        <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i> <span class="badge badge-dark">0</span></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============== Order Confirmation Section Starts Here ============== -->
+  <section class="order_confirmation py-5 my-5" id="order_confirmation">
+    <div class="container">
+      <div class="section_title text-center mb-5">
+        <h1 class="text-capitalize">Order Confirmation</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mx-auto text-center">
+          <div>
+            <img src="images/tick.jpg" class="img-fluid" alt="Success">
+          </div>
+          <div>
+            <h2>Thank you for your purchase!</h2>
+            <h6>A confirmation email has been sent to <b>you@example.com</b></h6>
+            <h6><span class="mr-2">Order No:</span><span><b id="orderId">#00000000</b></span></h6>
+            <h6>
+              <span class="mr-2">Order Status:</span>
+              <span><b><span class="badge badge-success">Confirmed</span></b></span>
+            </h6>
+            <a href="index.html" class="btn btn-primary btn-lg mt-4">Return to Home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ============== Order Confirmation Section Ends Here ============== -->
+
+  <!-- Footer -->
+  <footer class="text-center py-4 bg-light text-white">
+    <div class="footer-sections" >
+
+      <!-- Logo and About -->
+      <div style="flex: 1; min-width: 220px;">
+        <h2 style="font-size: 24px; color: #333;" id="logofont"> <img src="images/logo.png" alt="logo"> ShopNow!</h2>
+        <p style="font-size: 14px; line-height: 1.6; color: #2c3e50; ">
+          Click it. Cart it. Shop it. <br> Enjoy a seamless shopping experience, fast delivery, and easy returns.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div style="flex: 1; min-width: 200px;">
+        <h3 style="font-size: 18px; margin-bottom: 15px; font-weight: bold; color: #333;">Quick Links</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="#" style="text-decoration: none; color: #2c3e50;">Home</a></li>
+          <li><a href="#latest-products" style="text-decoration: none; color: #2c3e50">Shop</a></li>
+          <li><a href="#" style="text-decoration: none; color: #2c3e50;">Cart</a></li>
+          <li><a href="#" style="text-decoration: none; color: #2c3e50;">My Orders</a></li>
+          <li><a href="#about-us" style="text-decoration: none; color: #2c3e50;">About Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div style="flex: 1; min-width: 200px;">
+        <h3 style="font-size: 18px; margin-bottom: 15px; font-weight: bold; color: #333;">Support</h3>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="#contact-us" style="text-decoration: none; color: #2c3e50;">Contact Us</a></li>
+          <li><a href="#" style="text-decoration: none; color: #2c3e50;">FAQs</a></li>
+          <li><a href="#" style="text-decoration: none; color: #2c3e50;">Shipping & Returns</a></li>
+          <li><a href="#" style="text-decoration: none; color: #2c3e50;">Terms of Service</a></li>
+          <li><a href="#" style="text-decoration: none; color: #2c3e50;">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <p style="color: #2c3e50; font-weight: bold;">&copy; 2025 ShopZone. All rights reserved.</p>
+  </footer>
+
+
+  <script src="order-confirmation.js"></script>
+</body>
+</html>
